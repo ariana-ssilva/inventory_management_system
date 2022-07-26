@@ -1,0 +1,169 @@
+!SESSION 2022-07-25 20:06:47.984 -----------------------------------------------
+eclipse.buildId=4.23.0.I20220308-0310
+java.version=17.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2022-07-25 20:13:59.174
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2022-07-25 20:13:59.174
+!MESSAGE Cannot bind to an undefined command: plug-in='com.genuitec.eclipse.theming.ui', id='com.genuitec.myeclipse.help.darktheme.commandid'
+
+!ENTRY com.genuitec.eclipse.theming.ui 1 0 2022-07-25 20:14:00.435
+!MESSAGE A DevStyle Theme is being activated on this workspace; preparing colors and configuration
+
+!ENTRY com.genuitec.eclipse.theming.ui 1 0 2022-07-25 20:14:00.460
+!MESSAGE DevStyle has archived current color configurations to alternate preferences - will be restored when switching out of the DevStyle Theme
+
+!ENTRY org.eclipse.jface 2 0 2022-07-25 20:14:03.313
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-07-25 20:14:03.313
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@61ce2d47,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@184b3575,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-07-25 20:14:03.313
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@b0e903a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2ca2fcb5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-07-25 20:14:13.576
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-07-25 20:14:13.662
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-07-25 20:14:13.890
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\User'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2022-07-25 20:14:18.694
+!MESSAGE Using unsafe http transport to retrieve http://downloads.genuitec.com/downloads/products/devstyle/updates/ds20220613a, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY com.wakatime.eclipse.plugin 1 0 2022-07-25 20:14:19.723
+!MESSAGE wakatime-cli is up to date.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2022-07-25 20:14:19.783
+!MESSAGE Using unsafe http transport to retrieve http://downloads.genuitec.com/downloads/products/devstyle/updates/ds20220613a, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2022-07-25 20:14:24.764
+!MESSAGE Using unsafe http transport to retrieve http://downloads.genuitec.com/downloads/products/devstyle/updates/ds20220613a, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2022-07-25 20:14:26.200
+!MESSAGE Using unsafe http transport to retrieve http://downloads.genuitec.com/downloads/products/codetogether/updates/ct20220704/artifacts.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:26.585
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipse.inlinesearch,1.11.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:26.585
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipse.core.common.rss,13.0.2.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:26.591
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipse.meexplorer,13.0.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:26.592
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipse.core.common.platform,13.0.2.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:27.671
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipse.meexplorer.jdt,1.11.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:27.800
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipse.monitor,13.0.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:27.980
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipse.news,1.11.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:28.511
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipse.patches,1.11.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:28.546
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipse.startup,1.11.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:28.995
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipse.startup.workspace,1.11.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:29.213
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipse.theming.base,1.11.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:29.887
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipse.theming.base.win,1.11.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:30.117
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipse.theming.core,1.11.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:30.279
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipse.theming.css,1.11.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:30.280
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipse.theming.elevation.win32,1.11.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:31.025
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipse.theming.epl,1.11.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:31.566
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipse.theming.scrollbar,1.11.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:32.471
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipse.theming.scrollbar.win,1.11.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:32.559
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipse.theming.ui,1.11.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:33.276
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipse.ui.common.platform,13.0.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:33.566
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipse.webclipse.evergreen,1.11.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:34.798
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipse.webicons,1.11.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:35.311
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,com.genuitec.eclipsecolortheme.api,1.11.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:36.278
+!MESSAGE No digest algorithm is available to verify download of org.eclipse.update.feature,com.genuitec.eclipse.base.feature,1.11.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:36.678
+!MESSAGE No digest algorithm is available to verify download of org.eclipse.update.feature,com.genuitec.eclipse.common.explorer.jdt.feature,1.11.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:36.910
+!MESSAGE No digest algorithm is available to verify download of org.eclipse.update.feature,com.genuitec.eclipse.theming.core.feature,1.11.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2022-07-25 20:14:37.385
+!MESSAGE No digest algorithm is available to verify download of org.eclipse.update.feature,com.genuitec.eclipse.theming.feature,1.11.0.202206271604.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2022-07-25 20:19:39.086
+!MESSAGE Using unsafe http transport to retrieve http://downloads.genuitec.com/downloads/products/devstyle/updates/ds20220613a, see CVE-2021-41033. Consider using https instead.
