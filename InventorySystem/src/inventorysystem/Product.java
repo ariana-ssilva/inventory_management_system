@@ -11,7 +11,8 @@ import javax.swing.table.DefaultTableModel;
 import net.proteanit.sql.DbUtils;
 
 public class Product extends javax.swing.JFrame {
-     /* connecting to DB - variables */
+
+    /* connecting to DB - variables */
     Connection Conn = null;
     Statement St = null;
     ResultSet Rs = null;
@@ -19,6 +20,7 @@ public class Product extends javax.swing.JFrame {
     public Product() {
         initComponents();
         SelectProd();
+        GetCategory();
     }
 
     @SuppressWarnings("unchecked")
@@ -52,6 +54,7 @@ public class Product extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -184,7 +187,6 @@ public class Product extends javax.swing.JFrame {
 
         CatCb.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         CatCb.setForeground(new java.awt.Color(51, 102, 255));
-        CatCb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         CatCb.setBorder(null);
 
         DeleteBtn.setBackground(new java.awt.Color(51, 102, 255));
@@ -382,6 +384,23 @@ public class Product extends javax.swing.JFrame {
         }
     }
 
+    private void GetCategory() {
+        try
+        {
+            Conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/inventorysystem?useTimezone=true&serverTimezone=UTC", "root", "root");
+            St = Conn.createStatement();
+            String query = "SELECT * FROM CATEGORYTBL";
+            Rs = St.executeQuery(query);
+            while (Rs.next()){
+                String MyCategory = Rs.getString("CATEGORYNAME");
+                CatCb.addItem(MyCategory);
+            }
+        } catch (Exception e)
+        {
+        }
+    }
+
+
     /* connecting to DB */
     private void AddBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddBtnMouseClicked
         try
@@ -430,7 +449,7 @@ public class Product extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_EditBtnMouseClicked
-    
+
     /* delete products */
     private void DeleteBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DeleteBtnMouseClicked
         if (ProdID.getText().isEmpty())
@@ -470,7 +489,7 @@ public class Product extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void HomeBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeBtnMouseClicked
-        new Login().setVisible(true);
+        new Home().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_HomeBtnMouseClicked
 

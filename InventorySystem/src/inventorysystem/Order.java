@@ -38,6 +38,7 @@ public class Order extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         HomeBtn = new javax.swing.JLabel();
+        LogoutBtn = new javax.swing.JLabel();
         AddOrderBtn = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -98,6 +99,13 @@ public class Order extends javax.swing.JFrame {
             }
         });
 
+        LogoutBtn.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Desktop\\Entra 21\\inventory_management_system\\images\\logout.png")); // NOI18N
+        LogoutBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LogoutBtnMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -107,13 +115,15 @@ public class Order extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(HomeBtn)
-                .addGap(170, 170, 170)
-                .addComponent(jLabel2)
+                .addGap(210, 210, 210)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 463, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(LogoutBtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
                 .addContainerGap())
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(373, 373, 373)
+                .addGap(389, 389, 389)
                 .addComponent(jLabel5)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -121,15 +131,17 @@ public class Order extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(HomeBtn)
                             .addComponent(jLabel4)
-                            .addComponent(jLabel2))))
+                            .addComponent(jLabel2)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(LogoutBtn)
+                            .addComponent(jLabel3))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addComponent(jLabel5))
         );
 
@@ -588,7 +600,7 @@ public class Order extends javax.swing.JFrame {
             {
                 Conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/inventorysystem?useTimezone=true&serverTimezone=UTC", "root", "root");
                 System.out.println("Conectado!");
-                PreparedStatement add = Conn.prepareStatement("INSERT INTO ORDER VALUES ( ?, ?, ? , ?) ");
+                PreparedStatement add = Conn.prepareStatement("INSERT INTO ORDERTBL VALUES ( ?, ?, ? , ?) ");
                 add.setInt(1, Integer.valueOf(BillID.getText()));
                 add.setString(2, CustNamelbl.getText());
                 add.setString(3, Datelbl.getText());
@@ -604,7 +616,7 @@ public class Order extends javax.swing.JFrame {
     }//GEN-LAST:event_AddOrderBtnMouseClicked
 
     private void HomeBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeBtnMouseClicked
-        new Login().setVisible(true);
+        new Home().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_HomeBtnMouseClicked
 
@@ -637,6 +649,11 @@ public class Order extends javax.swing.JFrame {
     private void PrintBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrintBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PrintBtnActionPerformed
+
+    private void LogoutBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogoutBtnMouseClicked
+         new Login().setVisible(true);
+        this.dispose(); 
+    }//GEN-LAST:event_LogoutBtnMouseClicked
 
     /**
      * @param args the command line arguments
@@ -689,6 +706,7 @@ public class Order extends javax.swing.JFrame {
     private javax.swing.JTable CustomerTable;
     private javax.swing.JLabel Datelbl;
     private javax.swing.JLabel HomeBtn;
+    private javax.swing.JLabel LogoutBtn;
     private javax.swing.JTextField Price;
     private javax.swing.JButton PrintBtn;
     private javax.swing.JTable ProductTable;
